@@ -150,11 +150,11 @@ export default function Page() {
           {/* Hero image (your attached photo, centered face) */}
           <div className="lg:col-span-6 reveal" style={{ animationDelay: "110ms" }}>
             <div className="relative overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-[0_20px_60px_rgba(2,6,23,0.12)]">
-              <img
-                alt="Doctor portrait"
-                src="/images/hero-doctor.jpg"
-                className="h-[380px] md:h-[460px] w-full object-cover object-center"
-              />
+            <img
+  alt="מדענית צעירה מחייכת בקליניקה מודרנית"
+  src="https://stockcake.com/i/playful-lab-scientist_1241045_1108532"
+  className="h-[380px] md:h-[460px] w-full object-cover object-center"
+/>
 
               {/* Soft bottom overlay with 2 crisp cards (kept minimal) */}
               <div className="absolute inset-x-0 bottom-0 p-4 md:p-5">
@@ -275,11 +275,12 @@ export default function Page() {
 
           <div className="reveal" style={{ animationDelay: "110ms" }}>
             <div className="relative overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-[0_20px_60px_rgba(2,6,23,0.10)]">
-              <img
-  alt="Doctor portrait"
-  src="/images/hero-doctor.jpg"
-  className="h-[380px] md:h-[460px] w-full object-cover object-center"
+             <img
+  alt="רופאה מחייכת בקליניקה מודרנית"
+  src="https://stockcake.com/i/smiling-female-doctor_1393540_1043689"
+  className="h-[420px] w-full object-cover object-center"
 />
+
               <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
               <div className="absolute bottom-4 right-4 left-4 card p-4">
                 <p className="text-slate-900 font-semibold">יותר זמן למטופלים. פחות אדמיניסטרציה.</p>
