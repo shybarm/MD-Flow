@@ -149,11 +149,13 @@ export default function Page() {
           {/* Hero image */}
           <div className="lg:col-span-6 reveal" style={{ animationDelay: "110ms" }}>
             <div className="relative overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-[0_20px_60px_rgba(2,6,23,0.12)]">
-              <img
-                alt="מדענית צעירה מחייכת בקליניקה מודרנית"
-                src="https://stockcake.com/i/playful-lab-scientist_1241045_1108532"
-                className="h-[380px] md:h-[460px] w-full object-cover object-[50%_25%]"
-              />
+             <img
+  alt="רופאה מחייכת"
+  src="https://bvwnltducovnojfnlhji.supabase.co/storage/v1/object/sign/appointment-files/joyful-doctor-posing-stockcake.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDI5YzVhYi05MTI0LTRiM2ItYjkzZC1kOTcyMDk1ZTgxYmUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhcHBvaW50bWVudC1maWxlcy9qb3lmdWwtZG9jdG9yLXBvc2luZy1zdG9ja2Nha2Uud2VicCIsImlhdCI6MTc2NjU5MzEzMCwiZXhwIjoxNzk4MTI5MTMwfQ.b0pwTr0krjqCPaQSxVk7pUa0XcC5Pt3PcDcIN0H6qyA"
+  className="h-[380px] md:h-[460px] w-full object-cover object-[50%_25%]"
+  loading="eager"
+/>
+
 
               {/* Soft bottom overlay with 2 crisp cards (kept minimal) */}
               <div className="absolute inset-x-0 bottom-0 p-4 md:p-5">
@@ -274,11 +276,12 @@ export default function Page() {
 
           <div className="reveal" style={{ animationDelay: "110ms" }}>
             <div className="relative overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-[0_20px_60px_rgba(2,6,23,0.10)]">
-              <img
-                alt="רופאה מחייכת בקליניקה מודרנית"
-                src="https://stockcake.com/i/smiling-female-doctor_1393540_1043689"
-                className="h-[420px] w-full object-cover object-[50%_30%]"
-              />
+            <img
+  alt="רופאה מחייכת בקליניקה מודרנית"
+  src="https://bvwnltducovnojfnlhji.supabase.co/storage/v1/object/sign/appointment-files/smiling-female-doctor-stockcake.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDI5YzVhYi05MTI0LTRiM2ItYjkzZC1kOTcyMDk1ZTgxYmUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhcHBvaW50bWVudC1maWxlcy9zbWlsaW5nLWZlbWFsZS1kb2N0b3Itc3RvY2tjYWtlLmpwZyIsImlhdCI6MTc2NjU5MzA0OCwiZXhwIjoxNzk4MTI5MDQ4fQ.e1z6kh7Qi3JeYvMk6xCD9j_Mq_sZAYdYUTdA4ymjJyY"
+  className="h-[420px] w-full object-cover object-[50%_30%]"
+  loading="lazy"
+/>
 
               <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
               <div className="absolute bottom-4 right-4 left-4 card p-4">
