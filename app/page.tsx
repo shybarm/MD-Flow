@@ -276,10 +276,10 @@ export default function Page() {
           <div className="reveal" style={{ animationDelay: "110ms" }}>
             <div className="relative overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-[0_20px_60px_rgba(2,6,23,0.10)]">
               <img
-                alt="Smiling medical staff"
-                className="h-[420px] w-full object-cover object-center"
-                src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1600&q=80"
-              />
+  alt="Doctor portrait"
+  src="/images/hero-doctor.jpg"
+  className="h-[380px] md:h-[460px] w-full object-cover object-center"
+/>
               <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
               <div className="absolute bottom-4 right-4 left-4 card p-4">
                 <p className="text-slate-900 font-semibold">יותר זמן למטופלים. פחות אדמיניסטרציה.</p>
