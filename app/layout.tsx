@@ -1,5 +1,12 @@
-export const metadata = {
-  title: 'MD-FLOW | ניהול קליניקה חכמה מבוססת AI ושיווק לרופאים',
-  description: 'המערכת המתקדמת ביותר לרופאים פרטיים: קידום SEO, סיכום ביקורים ב-AI, ניהול יומן ב-WhatsApp ואנליטיקס בזמן אמת.',
-  keywords: 'ניהול מרפאה, SEO לרופאים, בינה מלאכותית רפואית, יומן לרופא, שיווק קליניקה פרטית',
+// app/layout.tsx
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="he">
+      <body>{children}</body>
+    </html>
+  )
 }
