@@ -101,17 +101,16 @@ export default function Page() {
               <span>מוכנות לתאימות לפי הנחיות משרד הבריאות</span>
             </div>
 
-          <h1 className="mt-6 text-4xl md:text-5xl font-bold leading-[1.1] text-slate-900">
-  קליניקה הפרטית, <span className="text-blue-600">צעד אחד לפני כולם.</span>
-</h1>
+            <h1 className="mt-6 text-4xl md:text-5xl font-bold leading-[1.1] text-slate-900">
+              קליניקה הפרטית, <span className="text-blue-600">צעד אחד לפני כולם.</span>
+            </h1>
 
-<p className="mt-4 text-lg text-slate-600 max-w-xl">
-  <span className="font-semibold text-slate-800">SEO שמביא מטופלים.</span>{" "}
-  <span className="font-semibold text-slate-800">AI שמסכם ביקורים.</span>
-  <br />
-  אתה מתמקד ברפואה המערכת מנהלת את השאר.
-</p>
-
+            <p className="mt-4 text-lg text-slate-600 max-w-xl">
+              <span className="font-semibold text-slate-800">SEO שמביא מטופלים.</span>{" "}
+              <span className="font-semibold text-slate-800">AI שמסכם ביקורים.</span>
+              <br />
+              אתה מתמקד ברפואה — המערכת מנהלת את השאר.
+            </p>
 
             <div className="mt-6 flex flex-col sm:flex-row gap-3">
               <button
@@ -147,14 +146,14 @@ export default function Page() {
             </div>
           </div>
 
-          {/* Hero image (your attached photo, centered face) */}
+          {/* Hero image */}
           <div className="lg:col-span-6 reveal" style={{ animationDelay: "110ms" }}>
             <div className="relative overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-[0_20px_60px_rgba(2,6,23,0.12)]">
-            <img
-  alt="מדענית צעירה מחייכת בקליניקה מודרנית"
-  src="https://stockcake.com/i/playful-lab-scientist_1241045_1108532"
-  className="h-[380px] md:h-[460px] w-full object-cover object-center"
-/>
+              <img
+                alt="מדענית צעירה מחייכת בקליניקה מודרנית"
+                src="https://stockcake.com/i/playful-lab-scientist_1241045_1108532"
+                className="h-[380px] md:h-[460px] w-full object-cover object-[50%_25%]"
+              />
 
               {/* Soft bottom overlay with 2 crisp cards (kept minimal) */}
               <div className="absolute inset-x-0 bottom-0 p-4 md:p-5">
@@ -275,11 +274,11 @@ export default function Page() {
 
           <div className="reveal" style={{ animationDelay: "110ms" }}>
             <div className="relative overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-[0_20px_60px_rgba(2,6,23,0.10)]">
-             <img
-  alt="רופאה מחייכת בקליניקה מודרנית"
-  src="https://stockcake.com/i/smiling-female-doctor_1393540_1043689"
-  className="h-[420px] w-full object-cover object-center"
-/>
+              <img
+                alt="רופאה מחייכת בקליניקה מודרנית"
+                src="https://stockcake.com/i/smiling-female-doctor_1393540_1043689"
+                className="h-[420px] w-full object-cover object-[50%_30%]"
+              />
 
               <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
               <div className="absolute bottom-4 right-4 left-4 card p-4">
