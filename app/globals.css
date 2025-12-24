@@ -2,39 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  scroll-behavior: smooth;
+html { scroll-behavior: smooth; }
+
+:root{
+  --md-blue: #2563eb;
 }
 
-::selection {
-  background: rgba(37, 99, 235, 0.25);
-}
-
-/* A cleaner, EasyBizy-like premium SaaS background (lighter, more human) */
-body {
+body{
   background:
-    radial-gradient(900px 500px at 85% 10%, rgba(37, 99, 235, 0.18), transparent 60%),
-    radial-gradient(700px 420px at 15% 25%, rgba(56, 189, 248, 0.14), transparent 55%),
-    radial-gradient(600px 420px at 50% 95%, rgba(37, 99, 235, 0.12), transparent 60%),
-    linear-gradient(180deg, #020617 0%, #020617 40%, #030a1c 100%);
-  color: #e2e8f0;
+    radial-gradient(900px 500px at 85% 0%, rgba(37, 99, 235, 0.14), transparent 60%),
+    radial-gradient(700px 450px at 15% 10%, rgba(56, 189, 248, 0.14), transparent 55%),
+    linear-gradient(180deg, #ffffff 0%, #f8fafc 40%, #ffffff 100%);
+  color: #0f172a;
 }
 
-/* Glass */
-.glass {
-  background: rgba(15, 23, 42, 0.55);
-  backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 255, 255, 0.09);
+::selection { background: rgba(37, 99, 235, 0.18); }
+
+/* Light “card” system (Navan-ish) */
+.card{
+  background: rgba(255,255,255,0.92);
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  border-radius: 24px;
+  box-shadow:
+    0 10px 30px rgba(2, 6, 23, 0.06),
+    0 1px 0 rgba(255,255,255,0.6) inset;
 }
 
-.glassLight {
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+.soft{
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: rgba(255,255,255,0.70);
+  border-radius: 18px;
 }
 
-.glow {
-  box-shadow: 0 0 70px rgba(37, 99, 235, 0.30);
+.pill{
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.18);
+  border-radius: 999px;
 }
 
 /* Simple reveal */
@@ -42,6 +45,4 @@ body {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
-.reveal {
-  animation: riseFade 650ms ease-out both;
-}
+.reveal { animation: riseFade 650ms ease-out both; }
