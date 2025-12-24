@@ -36,24 +36,21 @@ export default function Page() {
   function closeDemo() {
     setIsModalOpen(false);
   }
-
   function submitDemo(e: React.FormEvent) {
     e.preventDefault();
     if (!form.fullName.trim() || !form.phone.trim()) return;
-    // No DB yet: simulate success
     setIsThankYou(true);
   }
 
   return (
     <main className="min-h-screen">
-      {/* Font */}
       <link
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;600;700&display=swap"
       />
       <style>{`body{font-family:Heebo,system-ui,sans-serif}`}</style>
 
-      {/* NAV (clean + light + login CTA) */}
+      {/* NAV */}
       <header className="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-slate-200">
         <div className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -94,32 +91,29 @@ export default function Page() {
         </div>
       </header>
 
-      {/* HERO (Navan-ish: airy + big type + human image + proof) */}
+      {/* HERO (clean + aligned + less text) */}
       <section className="px-6 pt-12 md:pt-16 pb-10">
-        <div className="mx-auto max-w-6xl grid lg:grid-cols-2 gap-12 items-center">
-          <div className="reveal">
+        <div className="mx-auto max-w-6xl grid lg:grid-cols-12 gap-10 items-center">
+          {/* Copy */}
+          <div className="lg:col-span-6 reveal">
             <div className="inline-flex items-center gap-2 pill px-4 py-2 text-sm text-slate-800">
               <ShieldCheck className="h-4 w-4 text-blue-600" />
-              <span>תשתית מוכוונת אבטחת מידע • מוכנות לתאימות לפי הנחיות משרד הבריאות</span>
+              <span>מוכנות לתאימות לפי הנחיות משרד הבריאות</span>
             </div>
 
-            <h1 className="mt-6 text-4xl md:text-5xl font-bold leading-tight text-slate-900">
-              המרפאה שלך בשיא הקידמה:
-              <span className="text-blue-600"> מ-SEO מנצח ועד סיכום ביקור ב-AI.</span>
-              <br />
-              הדור הבא של ניהול הקליניקה הפרטית.
-              <br />
-              <span className="text-slate-700">
-                אנחנו מביאים את המטופלים, ה-AI מנהל את הניירת.
-              </span>
-            </h1>
+          <h1 className="mt-6 text-4xl md:text-5xl font-bold leading-[1.1] text-slate-900">
+  קליניקה הפרטית, <span className="text-blue-600">צעד אחד לפני כולם.</span>
+</h1>
 
-            <p className="mt-6 text-lg text-slate-600 max-w-xl">
-              נמאס לך להיות גם רופא, גם מזכירה וגם איש שיווק? מערכת All-in-One שנבנתה ע״י מומחי שיווק וטכנולוגיה,
-              במיוחד עבור רופאים שרוצים קליניקה פרטית רווחית, ממותגת ויעילה — בלי לבזבז דקה על אדמיניסטרציה.
-            </p>
+<p className="mt-4 text-lg text-slate-600 max-w-xl">
+  <span className="font-semibold text-slate-800">SEO שמביא מטופלים.</span>{" "}
+  <span className="font-semibold text-slate-800">AI שמסכם ביקורים.</span>
+  <br />
+  אתה מתמקד ברפואה המערכת מנהלת את השאר.
+</p>
 
-            <div className="mt-8 flex flex-col sm:flex-row gap-3">
+
+            <div className="mt-6 flex flex-col sm:flex-row gap-3">
               <button
                 onClick={openDemo}
                 className="px-8 py-4 rounded-2xl bg-blue-600 hover:bg-blue-700 transition font-semibold text-lg text-white inline-flex items-center justify-center gap-2"
@@ -136,43 +130,46 @@ export default function Page() {
               </a>
             </div>
 
-            <div className="mt-6 flex flex-wrap items-center gap-3 text-sm text-slate-700">
-              <Badge>בלי דמי הקמה</Badge>
-              <Badge>בלי התחייבות</Badge>
-              <Badge>הדומיין שלך</Badge>
-              <Badge>189 ₪ לחודש + מע״מ</Badge>
+            {/* Minimal proof chips (not busy) */}
+            <div className="mt-6 flex flex-wrap items-center gap-2 text-sm text-slate-700">
+              <Chip>בלי דמי הקמה</Chip>
+              <Chip>בלי התחייבות</Chip>
+              <Chip>הדומיין שלך</Chip>
+              <Chip>189 ₪ לחודש + מע״מ</Chip>
             </div>
 
-            <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
-              <Kpi label="זימון תורים" value="24/7" />
-              <Kpi label="WhatsApp/SMS" value="אוטומטי" />
-              <Kpi label="SEO Growth" value="אורגני" />
-              <Kpi label="AI Scribe" value="בקליק" />
+            {/* Small feature row (aligned, compact) */}
+            <div className="mt-8 grid grid-cols-2 gap-3 text-sm">
+              <MiniKpi label="זימון תורים" value="24/7" />
+              <MiniKpi label="WhatsApp/SMS" value="אוטומטי" />
+              <MiniKpi label="AI Scribe" value="בקליק" />
+              <MiniKpi label="Analytics" value="מדיד" />
             </div>
           </div>
 
-          <div className="reveal" style={{ animationDelay: "110ms" }}>
+          {/* Hero image (your attached photo, centered face) */}
+          <div className="lg:col-span-6 reveal" style={{ animationDelay: "110ms" }}>
             <div className="relative overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-[0_20px_60px_rgba(2,6,23,0.12)]">
-              {/* Smiling, human photo */}
               <img
-                alt="Smiling doctor in clinic"
-                className="h-[360px] md:h-[420px] w-full object-cover"
-                src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=1600&q=80"
+                alt="Doctor portrait"
+                src="/images/hero-doctor.jpg"
+                className="h-[380px] md:h-[460px] w-full object-cover object-center"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent" />
 
-              {/* Floating product cards */}
-              <div className="absolute bottom-4 right-4 left-4 grid md:grid-cols-2 gap-3">
-                <FloatCard
-                  title="אתר שמביא פניות"
-                  desc="תוכן לפי התמחות + CTA שממיר"
-                  icon={<BarChart3 className="h-4 w-4 text-blue-600" />}
-                />
-                <FloatCard
-                  title="Backoffice קל לשימוש"
-                  desc="תורים, תזכורות, תשלומים, מסמכים"
-                  icon={<CalendarDays className="h-4 w-4 text-blue-600" />}
-                />
+              {/* Soft bottom overlay with 2 crisp cards (kept minimal) */}
+              <div className="absolute inset-x-0 bottom-0 p-4 md:p-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  <FloatCard
+                    title="אתר שמביא פניות"
+                    desc="SEO לפי התמחות + CTA שממיר"
+                    icon={<BarChart3 className="h-4 w-4 text-blue-600" />}
+                  />
+                  <FloatCard
+                    title="Backoffice One-Stop"
+                    desc="תורים • תזכורות • תשלומים"
+                    icon={<CalendarDays className="h-4 w-4 text-blue-600" />}
+                  />
+                </div>
               </div>
             </div>
 
@@ -185,11 +182,11 @@ export default function Page() {
         </div>
       </section>
 
-      {/* TRUST STRIP (logos-like pills; airy) */}
-      <section className="px-6 pb-14">
+      {/* TRUST STRIP */}
+      <section className="px-6 pb-12">
         <div className="mx-auto max-w-6xl card p-6">
           <p className="text-sm text-slate-600 mb-4">
-            נבנה עבור קליניקות פרטיות שרוצות לעבוד חכם ולהיראות פרימיום
+            נבנה לקליניקות פרטיות שרוצות חוויית פרימיום — בלי עומס תפעולי
           </p>
           <div className="grid grid-cols-2 md:grid-cols-6 gap-3 text-center text-slate-700 text-sm">
             <LogoPill>אורתופדיה</LogoPill>
@@ -202,13 +199,13 @@ export default function Page() {
         </div>
       </section>
 
-      {/* SERVICES (simple, not busy) */}
-      <section id="services" className="px-6 py-16">
+      {/* SERVICES */}
+      <section id="services" className="px-6 py-14">
         <div className="mx-auto max-w-6xl">
           <div className="text-center reveal">
             <h2 className="text-4xl font-bold text-slate-900">מה מקבלים במערכת?</h2>
             <p className="mt-4 text-slate-600 text-lg max-w-3xl mx-auto">
-              One-Stop Shop אמיתי: אתר על הדומיין שלך + Backoffice לניהול קליניקה + AI לסיכומים + שכבת SEO שמביאה מטופלים.
+              כל מה שצריך במקום אחד — עם UI קל לצוות קליניקה.
             </p>
           </div>
 
@@ -216,7 +213,7 @@ export default function Page() {
             <ServiceCard
               icon={<BarChart3 className="h-5 w-5 text-blue-600" />}
               title="SEO & PPC שמביאים אותך לראש"
-              desc="מנוע צמיחה: אסטרטגיית תוכן רפואית + דפי שירותים + מדידה."
+              desc="אסטרטגיית תוכן רפואית + דפי שירותים + מדידה."
             />
             <ServiceCard
               icon={<FileText className="h-5 w-5 text-blue-600" />}
@@ -225,12 +222,12 @@ export default function Page() {
             />
             <ServiceCard
               icon={<MessageCircleMore className="h-5 w-5 text-blue-600" />}
-              title="אוטומציה ל-WhatsApp/SMS"
-              desc="תזכורות חכמות שמפחיתות No-Shows ומורידות עומס."
+              title="WhatsApp/SMS אוטומטי"
+              desc="תזכורות חכמות שמפחיתות No-Shows."
             />
             <ServiceCard
               icon={<CreditCard className="h-5 w-5 text-blue-600" />}
-              title="ניהול פיננסי מהיר"
+              title="ניהול פיננסי"
               desc="חשבוניות/קבלות, סליקה מאובטחת* ודוחות בסיסיים."
               footnote="*חיבור לספק צד ג׳ לפי צורך."
             />
@@ -248,31 +245,30 @@ export default function Page() {
         </div>
       </section>
 
-      {/* HOW IT WORKS (clean 3-step + people image) */}
+      {/* HOW */}
       <section id="how" className="px-6 py-16 bg-slate-50 border-y border-slate-200">
         <div className="mx-auto max-w-6xl grid lg:grid-cols-2 gap-12 items-center">
           <div className="reveal">
-            <h2 className="text-4xl font-bold text-slate-900">איך זה עובד בפועל?</h2>
+            <h2 className="text-4xl font-bold text-slate-900">איך זה עובד?</h2>
             <p className="mt-4 text-slate-600 text-lg">
-              תהליך קצר, בלי כאב ראש: מקימים אתר על הדומיין שלך, מחברים Backoffice קל לשימוש,
-              ומתחילים להביא פניות אורגניות + אוטומציה לניהול יומיומי.
+              תהליך מהיר, מסודר ומדיד — בלי פרויקט ענק.
             </p>
 
             <div className="mt-8 grid gap-4">
               <StepCard
                 step="1"
-                title="אתר ממיר על הדומיין שלך"
-                desc="נראות פרימיום + דפי שירותים לפי התמחות + טפסים/WhatsApp."
+                title="עולים על הדומיין שלך"
+                desc="אתר פרימיום + דפי שירותים + CTA שממיר."
               />
               <StepCard
                 step="2"
-                title="Backoffice: יומן, תזכורות ותשלומים"
-                desc="זימון תורים 24/7, תזכורות אוטומטיות, וניהול בסיסי במקום אחד."
+                title="מחברים Backoffice קל"
+                desc="יומן, תזכורות, תשלומים ומסמכים — במקום אחד."
               />
               <StepCard
                 step="3"
-                title="AI + Growth לפי צורך"
-                desc="AI Scribe לסיכומי ביקור + SEO Scale להאצת צמיחה אורגנית."
+                title="מוסיפים AI + Growth כשצריך"
+                desc="AI Scribe + SEO Scale להאצת צמיחה אורגנית."
               />
             </div>
           </div>
@@ -281,26 +277,26 @@ export default function Page() {
             <div className="relative overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-[0_20px_60px_rgba(2,6,23,0.10)]">
               <img
                 alt="Smiling medical staff"
-                className="h-[420px] w-full object-cover"
+                className="h-[420px] w-full object-cover object-center"
                 src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1600&q=80"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
               <div className="absolute bottom-4 right-4 left-4 card p-4">
-                <p className="text-slate-900 font-semibold">יותר זמן למטופלים. פחות זמן לאדמיניסטרציה.</p>
-                <p className="text-slate-600 text-sm mt-1">UX נקי, קל, ומיועד לצוות קליניקה.</p>
+                <p className="text-slate-900 font-semibold">יותר זמן למטופלים. פחות אדמיניסטרציה.</p>
+                <p className="text-slate-600 text-sm mt-1">חוויית שימוש קלילה, נקייה וברורה.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* TESTIMONIALS (smiling people, light cards) */}
+      {/* TESTIMONIALS */}
       <section id="testimonials" className="px-6 py-16">
         <div className="mx-auto max-w-6xl">
           <div className="text-center reveal">
             <h2 className="text-4xl font-bold text-slate-900">המלצות מרופאים</h2>
             <p className="mt-4 text-slate-600 text-lg max-w-3xl mx-auto">
-              אתר ממיר + Backoffice + אוטומציות — ואז מוסיפים AI ו-SEO Scale כשהקליניקה מוכנה להאיץ.
+              One-Stop Shop שמוריד עומס — ומתחיל להביא פניות.
             </p>
           </div>
 
@@ -308,32 +304,32 @@ export default function Page() {
             <Testimonial
               name="ד״ר ליאור מ."
               role="אורתופדיה • מרפאה פרטית"
-              quote="היומן והתזכורות הורידו לי עומס בצורה מטורפת. והאתר סוף סוף מביא פניות איכותיות."
+              quote="היומן והתזכורות הורידו עומס בצורה משמעותית. האתר מביא פניות איכותיות."
               img="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80"
             />
             <Testimonial
               name="ד״ר נטע ש."
               role="רפואת עור • תל אביב"
-              quote="המערכת נקייה וקלה. מרגיש שמישהו באמת הבין איך קליניקה עובדת ביום-יום."
+              quote="המערכת נקייה וקלה. מרגיש שמישהו באמת הבין איך קליניקה עובדת."
               img="https://images.unsplash.com/photo-1551601651-2a8555f1a136?auto=format&fit=crop&w=800&q=80"
             />
             <Testimonial
               name="ד״ר אמיר ק."
               role="אסתטיקה • קליניקה ממותגת"
-              quote="הכי אהבתי שזה One-Stop Shop. פחות כלים מפוזרים, יותר שליטה."
+              quote="הכי אהבתי שזה One-Stop Shop. פחות כלים, יותר שליטה."
               img="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=800&q=80"
             />
           </div>
         </div>
       </section>
 
-      {/* PRICING (single clear plan + add-ons, light) */}
+      {/* PRICING */}
       <section id="pricing" className="px-6 py-16 bg-slate-50 border-y border-slate-200">
         <div className="mx-auto max-w-6xl">
           <div className="text-center reveal">
             <h2 className="text-4xl font-bold text-slate-900">מחיר פשוט. בלי הפתעות.</h2>
             <p className="mt-4 text-slate-600 text-lg max-w-3xl mx-auto">
-              בלי דמי הקמה • בלי התחייבות • הדומיין שלך • מתחילים מהר ומרחיבים לפי צורך.
+              בלי דמי הקמה • בלי התחייבות • הדומיין שלך • 189 ₪ לחודש + מע״מ
             </p>
           </div>
 
@@ -362,7 +358,7 @@ export default function Page() {
                 <PlanItem>תזכורות WhatsApp/SMS/מייל</PlanItem>
                 <PlanItem>סנכרון לנייד + Google Calendar</PlanItem>
                 <PlanItem>חשבוניות/קבלות + סליקה מאובטחת*</PlanItem>
-                <PlanItem>Analytics בסיסי למדידת ביצועים</PlanItem>
+                <PlanItem>Analytics בסיסי למדידה</PlanItem>
                 <PlanItem>תמיכה והטמעה מהירה</PlanItem>
                 <PlanItem>בלי דמי הקמה • בלי התחייבות</PlanItem>
               </div>
@@ -401,7 +397,7 @@ export default function Page() {
                 <AddonItem title="AI Scribe" desc="סיכומי ביקור + מכתבים רפואיים + שיתוף בקליק" />
                 <AddonItem title="SEO Scale" desc="אשכולות תוכן לפי התמחות + אופטימיזציה מתמשכת" />
                 <AddonItem title="Lead Management" desc="מעקב פניות + סטטוסים + תזכורות חכמות" />
-                <AddonItem title="טפסים + חתימה דיגיטלית" desc="טפסי הסכמה לנייד לפני הגעה" />
+                <AddonItem title="חתימה דיגיטלית" desc="טפסי הסכמה לנייד לפני הגעה" />
               </div>
 
               <div className="mt-6 soft p-4 text-sm text-slate-700">
@@ -410,36 +406,23 @@ export default function Page() {
               </div>
             </div>
           </div>
-
-          <div className="mt-10 text-center">
-            <button
-              onClick={openDemo}
-              className="px-10 py-5 rounded-2xl bg-blue-600 hover:bg-blue-700 transition font-semibold text-xl text-white"
-            >
-              בלי התחייבות — קבעו דמו קצר
-            </button>
-            <p className="mt-3 text-sm text-slate-500">
-              בלי דמי הקמה • הדומיין שלך • 189 ₪ לחודש + מע״מ
-            </p>
-          </div>
         </div>
       </section>
 
-      {/* ABOUT (trust paragraph) */}
+      {/* ABOUT */}
       <section id="about" className="px-6 py-16">
         <div className="mx-auto max-w-6xl grid lg:grid-cols-2 gap-12 items-center">
           <div className="reveal">
             <h2 className="text-4xl font-bold text-slate-900">עלינו</h2>
             <p className="mt-4 text-slate-600 text-lg leading-relaxed">
-              מגיעים מעולם הסטארטאפים, מבינים את עולם הרפואה. הקמנו את MD-FLOW אחרי שנים של ניהול שיווק וטכנולוגיה
-              בסטארטאפים מהצומחים בישראל. השילוב בין מומחיות ב-SEO, דאטה ובינה מלאכותית מאפשר לנו לתת לרופאים מעטפת
-              שאין לתוכנה גנרית אחרת — אתר שמביא פניות + מערכת שמסדרת את היום-יום.
+              מגיעים מעולם הסטארטאפים, מבינים את עולם הרפואה. בנינו את MD-FLOW כדי לתת לרופאים מעטפת אמיתית:
+              אתר שמביא פניות + מערכת שמסדרת את היום-יום — עם מדידה, אוטומציה ו-AI.
             </p>
 
             <div className="mt-6 grid md:grid-cols-2 gap-3 text-sm">
               <TrustPill>One-Stop Shop אמיתי</TrustPill>
-              <TrustPill>מדידה ותוצאות</TrustPill>
               <TrustPill>UX קל לצוות</TrustPill>
+              <TrustPill>מדידה ותוצאות</TrustPill>
               <TrustPill>הדומיין שלך</TrustPill>
             </div>
           </div>
@@ -447,16 +430,14 @@ export default function Page() {
           <div className="reveal" style={{ animationDelay: "110ms" }}>
             <div className="relative overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-[0_20px_60px_rgba(2,6,23,0.10)]">
               <img
-                alt="Happy patient in clinic"
-                className="h-[420px] w-full object-cover"
+                alt="Happy patient"
+                className="h-[420px] w-full object-cover object-center"
                 src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?auto=format&fit=crop&w=1600&q=80"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
               <div className="absolute bottom-4 right-4 left-4 card p-4">
-                <p className="text-slate-900 font-semibold">יותר אמון. יותר חוויה. יותר צמיחה.</p>
-                <p className="text-slate-600 text-sm mt-1">
-                  עיצוב אנושי, בהיר ומזמין — בדיוק כמו קליניקה טובה.
-                </p>
+                <p className="text-slate-900 font-semibold">קליניקה שמרגישה פרימיום — גם תפעולית.</p>
+                <p className="text-slate-600 text-sm mt-1">מסודר לצוות, נעים למטופל, מדיד לבעלים.</p>
               </div>
             </div>
           </div>
@@ -576,7 +557,7 @@ export default function Page() {
 
 /* ---- Components ---- */
 
-function Badge({ children }: { children: React.ReactNode }) {
+function Chip({ children }: { children: React.ReactNode }) {
   return (
     <span className="inline-flex items-center gap-2 rounded-full bg-blue-50 border border-blue-100 px-4 py-2">
       <Check className="h-4 w-4 text-blue-700" />
@@ -593,7 +574,7 @@ function MiniBadge({ children }: { children: React.ReactNode }) {
   );
 }
 
-function Kpi({ label, value }: { label: string; value: string }) {
+function MiniKpi({ label, value }: { label: string; value: string }) {
   return (
     <div className="soft p-4 text-center">
       <p className="text-xs text-slate-500">{label}</p>
@@ -613,7 +594,7 @@ function SmallStat({ label, value }: { label: string; value: string }) {
 
 function LogoPill({ children }: { children: React.ReactNode }) {
   return (
-    <div className="soft py-3 px-4 font-semibold">
+    <div className="soft py-3 px-4 font-semibold text-slate-700 text-center">
       {children}
     </div>
   );
