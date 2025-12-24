@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MD-FLOW | הקליניקה שלך, באוטופיילוט</title>
+
+  <!-- Tailwind CDN (Prototype Only) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Heebo', sans-serif;
+      background: radial-gradient(circle at top, #1e293b, #020617);
+    }
+
+    .glass {
+      background: rgba(15, 23, 42, 0.65);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .glow {
+      box-shadow: 0 0 60px rgba(37, 99, 235, 0.35);
+    }
+  </style>
+</head>
+
+<body class="text-slate-100 overflow-x-hidden">
+
+<!-- HERO -->
+<section class="relative min-h-screen flex items-center justify-center px-6">
+  <div class="max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center">
+
+    <!-- Copy -->
+    <div>
+      <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
+        הקליניקה שלך,<br>
+        <span class="text-blue-500">באוטופיילוט</span>
+      </h1>
+
+      <p class="text-xl text-slate-300 mb-10 max-w-xl">
+        MD-FLOW הופכת כל קליניקה פרטית למכונת צמיחה חכמה – 
+        תיעוד רפואי אוטומטי, שיווק אורגני אגרסיבי, ואפס בזבוז זמן.
+      </p>
+
+      <button onclick="openDemo()"
+        class="px-8 py-4 bg-blue-600 hover:bg-blue-500 transition-all rounded-xl text-lg font-semibold hover:scale-105">
+        קביעת דמו
+      </button>
+    </div>
+
+    <!-- Dashboard Mock -->
+    <div class="relative">
+      <div class="glass glow rounded-2xl p-6 space-y-4">
+        <div class="flex justify-between text-sm text-slate-400">
+          <span>AI Scribe – Live</span>
+          <span class="text-green-400">● Active</span>
+        </div>
+
+        <div class="bg-slate-900 rounded-xl p-4 text-sm leading-relaxed">
+          <p class="text-blue-400">רופא:</p>
+          <p>מה שלומך היום?</p>
+          <p class="text-blue-400 mt-3">מטופל:</p>
+          <p>כאבים בחזה בזמן מאמץ.</p>
+        </div>
+
+        <div class="bg-slate-900 rounded-xl p-4 text-sm">
+          <p class="text-slate-400 mb-2">סיכום אוטומטי:</p>
+          <p>
+            המטופל מדווח על כאבים בחזה במאמץ. מומלץ אק״ג,
+            בדיקות דם והפניה לקרדיולוג.
+          </p>
+        </div>
+
+        <div class="flex justify-between text-xs text-slate-400">
+          <span>דיוק תיעוד</span>
+          <span class="text-blue-400">99.1%</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- GROWTH -->
+<section class="py-28 px-6 bg-slate-950">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+
+    <div>
+      <h2 class="text-4xl font-bold mb-6">
+        לא רק קליניקה. <br>
+        <span class="text-blue-500">מנוע צמיחה דיגיטלי.</span>
+      </h2>
+
+      <p class="text-slate-300 text-lg mb-8">
+        MD-FLOW משלבת אוטומציה רפואית עם SEO רפואי חכם,
+        מעקב מבקרים והמרות בזמן אמת.
+      </p>
+
+      <ul class="space-y-4 text-slate-200">
+        <li>✔ שליטה במונחים רפואיים בעברית ואנגלית</li>
+        <li>✔ צמיחה אורגנית ממוצעת: <strong class="text-blue-400">+240%</strong></li>
+        <li>✔ חיבור מלא ל-WhatsApp ותזכורות אוטומטיות</li>
+      </ul>
+    </div>
+
+    <!-- Growth Chart -->
+    <div class="glass rounded-2xl p-8">
+      <p class="text-sm text-slate-400 mb-4">תנועת מבקרים</p>
+      <div class="h-40 flex items-end gap-3">
+        <div class="w-full bg-blue-500/40 rounded h-20"></div>
+        <div class="w-full bg-blue-500/60 rounded h-28"></div>
+        <div class="w-full bg-blue-500/80 rounded h-36"></div>
+        <div class="w-full bg-blue-500 rounded h-40"></div>
+      </div>
+      <p class="text-right mt-4 text-blue-400 font-semibold">
+        +240% תוך 90 יום
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="py-24 px-6">
+  <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-4xl font-bold mb-12">
+      אבטחה. תאימות. שקט נפשי.
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-10 text-slate-300">
+      <div class="glass p-6 rounded-xl">
+        <h3 class="font-semibold mb-3">HIPAA Ready</h3>
+        <p>הצפנה מלאה, הפרדת נתונים ותהליכים רפואיים מאובטחים.</p>
+      </div>
+
+      <div class="glass p-6 rounded-xl">
+        <h3 class="font-semibold mb-3">עברית רפואית</h3>
+        <p>זיהוי מדויק של מינוחים, קיצורים ודוחות רפואיים.</p>
+      </div>
+
+      <div class="glass p-6 rounded-xl">
+        <h3 class="font-semibold mb-3">אוטומציה מלאה</h3>
+        <p>תזכורות, גבייה, וסיכומים – בלי מגע יד אדם.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-24 bg-gradient-to-t from-blue-600/20 to-transparent text-center">
+  <h2 class="text-4xl font-bold mb-6">
+    מוכנים להפעיל את הקליניקה על אוטומט?
+  </h2>
+  <button onclick="openDemo()"
+    class="px-10 py-5 bg-blue-600 hover:bg-blue-500 transition rounded-2xl text-xl font-semibold hover:scale-105">
+    קביעת דמו
+  </button>
+</section>
+
+<!-- DEMO MODAL -->
+<div id="demoModal" class="fixed inset-0 hidden items-center justify-center bg-black/70">
+  <div class="glass p-8 rounded-2xl max-w-md w-full text-center">
+    <h3 class="text-2xl font-bold mb-4">תודה!</h3>
+    <p class="text-slate-300 mb-6">
+      בקשת הדמו התקבלה. נציג MD-FLOW יחזור אליך בקרוב.
+    </p>
+    <button onclick="closeDemo()" class="text-blue-400 underline">
+      סגור
+    </button>
+  </div>
+</div>
+
+<script>
+  function openDemo() {
+    document.getElementById('demoModal').classList.remove('hidden');
+    document.getElementById('demoModal').classList.add('flex');
+  }
+
+  function closeDemo() {
+    document.getElementById('demoModal').classList.add('hidden');
+  }
+</script>
+
+</body>
+</html>
